@@ -52,5 +52,12 @@ class TestTaskManager(unittest.TestCase):
         self.manager.complete_task(task.id)
         self.assertTrue(self.manager.is_completed(task.id))
 
+    def test_delete_decreases_task_count(self):
+        t1 = self.manager.add_task("Task 1")
+        t2 = self.manager.add_task("Task 2")
+        self.assertEqual(self.manager.get_task_count(), 2)
+        self.manager.delete_task(t1.id)
+        self.assertEqual(self.manager.get_task_count(), 1)
+
 if __name__ == "__main__":
     unittest.main()
