@@ -6,6 +6,10 @@ class TestTaskManager(unittest.TestCase):
     def setUp(self):
         self.manager = TaskManager()
 
+    def test_deliberate_failure_for_ci_demo(self):
+        """Demonstrates automated CI failure on broken code/test."""
+        self.assertEqual(1, 2, "Deliberate assertion failure for CI demonstration")
+
     def test_add_task_success(self):
         """Test adding a task with a valid non-empty title."""
         task = self.manager.add_task("Review Chapter 4 DevOps")
@@ -62,6 +66,4 @@ class TestTaskManager(unittest.TestCase):
 if __name__ == "__main__":
     unittest.main()
 
-    def test_deliberate_failure_for_ci_demo(self):
-        """Demonstrates automated CI failure on broken code/test."""
-        self.assertEqual(1, 2, "Deliberate failure to demonstrate CI pipeline catch")
+
