@@ -31,7 +31,7 @@ class TaskManager:
         self._counter: int = 1
 
     def add_task(self, title: str) -> Task:
-        """Adds a task with input validation rejecting empty or whitespace strings."""
+        """Adds a validated task to the list rejecting empty or whitespace strings."""
         sanitized_title = self.validate_title(title)
 
         new_task = Task(task_id=self._counter, title=sanitized_title)
