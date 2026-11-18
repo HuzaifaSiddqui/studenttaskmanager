@@ -46,5 +46,11 @@ class TestTaskManager(unittest.TestCase):
             self.manager.delete_task(999)
 
 
+    def test_is_completed_helper(self):
+        task = self.manager.add_task("Check status helper")
+        self.assertFalse(self.manager.is_completed(task.id))
+        self.manager.complete_task(task.id)
+        self.assertTrue(self.manager.is_completed(task.id))
+
 if __name__ == "__main__":
     unittest.main()
