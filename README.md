@@ -13,3 +13,6 @@ Run the console application:
 ```bash
 python3 main.py
 ```
+
+## Project Status
+Project status: Planning
