@@ -1,0 +1,42 @@
+test	Run Unit Tests	﻿2026-11-18T08:29:13.0465612Z ##[group]Run python -m unittest discover -s tests -v
+test	Run Unit Tests	2026-11-18T08:29:13.0465999Z ^[[36;1mpython -m unittest discover -s tests -v^[[0m
+test	Run Unit Tests	2026-11-18T08:29:13.0517227Z shell: /usr/bin/bash -e {0}
+test	Run Unit Tests	2026-11-18T08:29:13.0517478Z env:
+test	Run Unit Tests	2026-11-18T08:29:13.0517714Z   pythonLocation: /opt/hostedtoolcache/Python/3.10.22/x64
+test	Run Unit Tests	2026-11-18T08:29:13.0518093Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.10.22/x64/lib/pkgconfig
+test	Run Unit Tests	2026-11-18T08:29:13.0518487Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.10.22/x64
+test	Run Unit Tests	2026-11-18T08:29:13.0518818Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.10.22/x64
+test	Run Unit Tests	2026-11-18T08:29:13.0519144Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.10.22/x64
+test	Run Unit Tests	2026-11-18T08:29:13.0519752Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.10.22/x64/lib
+test	Run Unit Tests	2026-11-18T08:29:13.0520011Z ##[endgroup]
+test	Run Unit Tests	2026-11-18T08:29:13.1144783Z test_add_task_success (test_task_manager.TestTaskManager)
+test	Run Unit Tests	2026-11-18T08:29:13.1145420Z Test adding a task with a valid non-empty title. ... ok
+test	Run Unit Tests	2026-11-18T08:29:13.1145958Z test_add_task_validation_failure (test_task_manager.TestTaskManager)
+test	Run Unit Tests	2026-11-18T08:29:13.1146598Z Test that empty or whitespace titles raise ValueError. ... ok
+test	Run Unit Tests	2026-11-18T08:29:13.1147201Z test_complete_task_nonexistent_id (test_task_manager.TestTaskManager)
+test	Run Unit Tests	2026-11-18T08:29:13.1147738Z Test marking a non-existent task raises KeyError. ... ok
+test	Run Unit Tests	2026-11-18T08:29:13.1148270Z test_complete_task_success (test_task_manager.TestTaskManager)
+test	Run Unit Tests	2026-11-18T08:29:13.1148750Z Test marking an existing task as completed. ... ok
+test	Run Unit Tests	2026-11-18T08:29:13.1149281Z test_delete_decreases_task_count (test_task_manager.TestTaskManager) ... ok
+test	Run Unit Tests	2026-11-18T08:29:13.1149885Z test_delete_task_nonexistent_id (test_task_manager.TestTaskManager)
+test	Run Unit Tests	2026-11-18T08:29:13.1150473Z Test deleting a non-existent task raises KeyError. ... ok
+test	Run Unit Tests	2026-11-18T08:29:13.1150989Z test_delete_task_success (test_task_manager.TestTaskManager)
+test	Run Unit Tests	2026-11-18T08:29:13.1151427Z Test deleting a valid task by ID. ... ok
+test	Run Unit Tests	2026-11-18T08:29:13.1152039Z test_deliberate_failure_for_ci_demo (test_task_manager.TestTaskManager)
+test	Run Unit Tests	2026-11-18T08:29:13.1152627Z Demonstrates automated CI failure on broken code/test. ... FAIL
+test	Run Unit Tests	2026-11-18T08:29:13.1153183Z test_is_completed_helper (test_task_manager.TestTaskManager) ... ok
+test	Run Unit Tests	2026-11-18T08:29:13.1153543Z 
+test	Run Unit Tests	2026-11-18T08:29:13.1153686Z ======================================================================
+test	Run Unit Tests	2026-11-18T08:29:13.1154220Z FAIL: test_deliberate_failure_for_ci_demo (test_task_manager.TestTaskManager)
+test	Run Unit Tests	2026-11-18T08:29:13.1154590Z Demonstrates automated CI failure on broken code/test.
+test	Run Unit Tests	2026-11-18T08:29:13.1154891Z ----------------------------------------------------------------------
+test	Run Unit Tests	2026-11-18T08:29:13.1155185Z Traceback (most recent call last):
+test	Run Unit Tests	2026-11-18T08:29:13.1159914Z   File "/home/runner/work/studenttaskmanager/studenttaskmanager/tests/test_task_manager.py", line 11, in test_deliberate_failure_for_ci_demo
+test	Run Unit Tests	2026-11-18T08:29:13.1160588Z     self.assertEqual(1, 2, "Deliberate assertion failure for CI demonstration")
+test	Run Unit Tests	2026-11-18T08:29:13.1161004Z AssertionError: 1 != 2 : Deliberate assertion failure for CI demonstration
+test	Run Unit Tests	2026-11-18T08:29:13.1161247Z 
+test	Run Unit Tests	2026-11-18T08:29:13.1161377Z ----------------------------------------------------------------------
+test	Run Unit Tests	2026-11-18T08:29:13.1161841Z Ran 9 tests in 0.001s
+test	Run Unit Tests	2026-11-18T08:29:13.1162003Z 
+test	Run Unit Tests	2026-11-18T08:29:13.1162116Z FAILED (failures=1)
+test	Run Unit Tests	2026-11-18T08:29:13.1213404Z ##[error]Process completed with exit code 1.
