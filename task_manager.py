@@ -58,6 +58,13 @@ class TaskManager:
         task.completed = True
         return True
 
+    def is_completed(self, task_id: int) -> bool:
+        """Checks if a specific task is marked completed."""
+        task = self.get_task_by_id(task_id)
+        if not task:
+            raise KeyError(f"Task with ID {task_id} not found.")
+        return task.completed
+
     def delete_task(self, task_id: int) -> bool:
         """Deletes a task by ID."""
         task = self.get_task_by_id(task_id)
