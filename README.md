@@ -15,4 +15,4 @@ python3 main.py
 ```
 
 ## Project Status
-Project status: Development in Progress
+Project status: Active Development & Quality Review
