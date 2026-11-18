@@ -65,6 +65,10 @@ class TaskManager:
             raise KeyError(f"Task with ID {task_id} not found.")
         return task.completed
 
+    def get_task_count(self) -> int:
+        """Returns the total number of managed tasks."""
+        return len(self._tasks)
+
     def delete_task(self, task_id: int) -> bool:
         """Deletes a task by ID."""
         task = self.get_task_by_id(task_id)
