@@ -1,0 +1,36 @@
+*   d0e40ce Merge pull request #10 from HuzaifaSiddqui/feature/report-and-polish
+|\  
+| * 44d3cc6 docs: add lab report, update readme, and store verification evidence
+|/  
+*   e7707a6 Merge pull request #9 from HuzaifaSiddqui/feature/userguide-docs
+|\  
+| * 99335da docs: add comprehensive user guide with CLI walkthrough and test commands
+|/  
+| * 38d5462 test: place deliberate failure inside TestCase class
+| * ed94bec test: introduce deliberate failure to demonstrate CI pipeline detection
+|/  
+*   3ca1282 fix(merge-conflict): resolve status conflict between feature-a and feature-b
+|\  
+| * 15e6477 docs(status): update status to Under QA and Review
+* | 97fc64c docs(status): update status to Development in Progress
+|/  
+* 409959b docs: initialize project status as planning
+*   0646c9a Merge pull request #7 from HuzaifaSiddqui/feature/deletetask
+|\  
+| * aae2aac test(deletetask): add test verifying task count decrement upon deletion
+| * 9231ccd feat(deletetask): add get_task_count helper method
+|/  
+*   7360628 Merge pull request #6 from HuzaifaSiddqui/feature/completetask
+|\  
+| * 3d3acc7 test(completetask): add unit test for is_completed helper
+| * 9d55e19 feat(completetask): add is_completed status helper method
+|/  
+*   f7785fe Merge pull request #5 from HuzaifaSiddqui/feature/addtask
+|\  
+| * a155b13 docs(addtask): clarify add_task docstring
+| * e790cba feat(addtask): add validate_title static helper
+|/  
+* 5b24826 feat: initial commit with task manager, tests, and CI workflow
+* fe9f310 feat: implement task deletion by valid ID
+* 85c6264 feat: implement marking tasks as completed by ID
+* 98fb61e feat: add input validation rejecting empty task titles
