@@ -61,3 +61,7 @@ class TestTaskManager(unittest.TestCase):
 
 if __name__ == "__main__":
     unittest.main()
+
+    def test_deliberate_failure_for_ci_demo(self):
+        """Demonstrates automated CI failure on broken code/test."""
+        self.assertEqual(1, 2, "Deliberate failure to demonstrate CI pipeline catch")
