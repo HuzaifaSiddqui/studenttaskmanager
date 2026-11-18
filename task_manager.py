@@ -20,15 +20,19 @@ class Task:
 class TaskManager:
     """Manages collection of tasks, ID allocation, and CRUD operations."""
 
+    @staticmethod
+    def validate_title(title: str) -> str:
+        if not title or not title.strip():
+            raise ValueError("Task title cannot be empty or whitespace.")
+        return title.strip()
+
     def __init__(self):
         self._tasks: List[Task] = []
         self._counter: int = 1
 
     def add_task(self, title: str) -> Task:
-        """Adds a task with input validation rejecting empty or whitespace strings."""
-        sanitized_title = title.strip() if title else ""
-        if not sanitized_title:
-            raise ValueError("Task title cannot be empty or whitespace.")
+        """Adds a validated task to the list rejecting empty or whitespace strings."""
+        sanitized_title = self.validate_title(title)
 
         new_task = Task(task_id=self._counter, title=sanitized_title)
         self._tasks.append(new_task)
